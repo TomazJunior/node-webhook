@@ -54,7 +54,7 @@ npm run std
 
 ## Author
 
-* **Tomaz Junior - [github](https://github.com/TomazJunior)
+* **Tomaz Junior** - [github](https://github.com/TomazJunior)
 
 See also the list of [contributors](https://github.com/TomazJunior/node-webhook/contributors) who participated in this project.
 
