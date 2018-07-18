@@ -1,87 +1,73 @@
-# Project Title
+# node-webhook [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/feross/standard) 
 
-One Paragraph of project description goes here
+A simple webhook service, which will send a HTTP request based on the webhook's body and also store its result in mongodb.
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+```
+npm install
+npm start
+```
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+- MongoDB https://docs.mongodb.com/manual/installation/
+- NodeJS https://nodejs.org/en/
 
-```
-Give examples
-```
+### API examples
 
-### Installing
+The node-webhook is usefull if you need to track and log HTTP requests.
 
-A step by step series of examples that tell you how to get a development env running
+- GET /webhook Return all requests
 
-Say what the step will be
+- GET /webhook/{id} Return a specific request
 
-```
-Give the example
-```
+- GET /about Return README.md content
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+- POST /webhook Handle the webhook and returns the request id
+  - e.g.:
+  
+  ```
+  header: Content-Type = Content-Type
+  body : {
+    "port": 443,
+    "protocol": "https:",
+    "host": "github.com",
+    "path": "/TomazJunior/node-webhook"
+  }
+  response : {
+    "id": "5b4fa8cd822fce0fb1102ecf",
+    "status": "pending"
+  }
+  ```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+### StandardJS coding style tests
 
-### Break down into end to end tests
-
-Explain what these tests test and why
+It uses StandardJS as javascript style guide
 
 ```
-Give an example
+npm run std
 ```
 
-### And coding style tests
+## Author
 
-Explain what these tests test and why
+* **Tomaz Junior - [github](https://github.com/TomazJunior)
 
-```
-Give an example
-```
+See also the list of [contributors](https://github.com/TomazJunior/node-webhook/contributors) who participated in this project.
 
-## Deployment
+## Next steps
 
-Add additional notes about how to deploy this on a live system
+- [ ] Implement unit tests
+- [ ] Implement integration tests
+- [ ] Dockerize it
+- [ ] Turn it into a node module
 
-## Built With
+## Keywords
+- Child Processes
+- Requests
+- MongoDB
+- Async/Await
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
