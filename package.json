@@ -5,14 +5,25 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run std",
+    "std": "standard"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "webhooks",
+    "web",
+    "hooks",
+    "mongodb"
+  ],
+  "author": "Tomaz Junior <tomaz.jr@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "standard": "^11.0.1"
   },
   "dependencies": {
     "mongodb": "^3.1.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
