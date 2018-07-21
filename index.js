@@ -13,7 +13,7 @@ const database = new Database();
     await database.connect(20)  
   } catch (error) {
     console.log('failed connecting to mongoDB', error)
-    process.exit(-1);
+    process.exit(1);
   }
 
   console.log('Connected successfully to mongodb')
