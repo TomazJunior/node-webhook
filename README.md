@@ -62,7 +62,7 @@ See also the list of [contributors](https://github.com/TomazJunior/node-webhook/
 
 - [ ] Implement unit tests
 - [ ] Implement integration tests
-- [ ] Dockerize it
+- [x] Dockerize it
 - [ ] Turn it into a node module
 
 ## Keywords

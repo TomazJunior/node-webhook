@@ -9,27 +9,31 @@ const server = http.createServer()
 const database = new Database();
 
 (async () => {
-  await database.connect()
-  console.log('Connected successfully to mongodb')
-})()
-
-server.on('request', async (req, res) => {
   try {
-    const route = router.getRoute(req)
-    req.database = database
-    const data = await route.send(req, res)
-    res.write(typeof data === 'string' ? data : JSON.stringify(data))
+    await database.connect(20)  
   } catch (error) {
-    res.writeHead(error.code || 500, {'Content-Type': 'application/json'})
-    res.write(JSON.stringify({data: error.message}))
+    console.log('failed connecting to mongoDB', error)
+    process.exit(-1);
   }
-  res.end()
-})
 
-server.on('error', (error) => {
-  console.error(error)
-})
+  console.log('Connected successfully to mongodb')
 
-server.listen(httpPort, () => {
-  console.log('webhook initialized and listening the port', httpPort)
-})
+  server.on('request', async (req, res) => {
+    try {
+      const route = router.getRoute(req)
+      req.database = database
+      const data = await route.send(req, res)
+      res.write(typeof data === 'string' ? data : JSON.stringify(data))
+    } catch (error) {
+      res.writeHead(error.code || 500, {'Content-Type': 'application/json'})
+      res.write(JSON.stringify({data: error.message}))
+    }
+    res.end()
+  })
+  server.on('error', (error) => {
+    console.error(error)
+  })
+  server.listen(httpPort, () => {
+    console.log('webhook initialized and listening the port', httpPort)
+  })
+})()
