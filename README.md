@@ -5,15 +5,20 @@ A simple webhook service, which will send a HTTP request based on the webhook's 
 
 ## Getting Started
 
+### With docker
+```
+docker-compose up
+```
+### Without docker
+#### Prerequisites
+
+- MongoDB https://docs.mongodb.com/manual/installation/
+- NodeJS https://nodejs.org/en/
+
 ```
 npm install
 npm start
 ```
-
-### Prerequisites
-
-- MongoDB https://docs.mongodb.com/manual/installation/
-- NodeJS https://nodejs.org/en/
 
 ### API examples
 
