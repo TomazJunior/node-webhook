@@ -1,4 +1,4 @@
-# node-webhook [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/feross/standard) 
+# node-webhook [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/feross/standard) [![Coverage Status](https://coveralls.io/repos/TomazJunior/node-webhook/badge.svg?branch=master)](https://coveralls.io/r/<TomazJunior/node-webhook?branch=master)
 
 A simple webhook service, which will send a HTTP request based on the webhook's body and also store its result in mongodb.
 
