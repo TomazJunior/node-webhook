@@ -1,5 +1,5 @@
 const http = require('http')
-const Router = require('./lib/router')
+const Router = require('./lib/router/router')
 const Database = require('./lib/data/db')
 const httpPort = process.env.WH_HTTP_PORT || 3010
 
