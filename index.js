@@ -1,9 +1,10 @@
 const http = require('http')
 const Router = require('./lib/router/router')
+const routes = require('./lib/router/routes')
 const Database = require('./lib/data/db')
 const httpPort = process.env.WH_HTTP_PORT || 3010
 
-const router = new Router()
+const router = new Router(routes)
 const server = http.createServer()
 
 const database = new Database();
