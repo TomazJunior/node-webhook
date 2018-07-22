@@ -1,0 +1,5 @@
+lib/**/*.spec.js
+
+--ui bdd
+--recursive
+--timeout 15000
