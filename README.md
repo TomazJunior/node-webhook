@@ -65,8 +65,7 @@ See also the list of [contributors](https://github.com/TomazJunior/node-webhook/
 
 ## Next steps
 
-- [ ] Implement unit tests
-- [ ] Implement integration tests
+- [x] Implement unit tests
 - [x] Dockerize it
 - [ ] Turn it into a node module
 
