@@ -34,7 +34,7 @@ The node-webhook is usefull if you need to track and log HTTP requests.
   - e.g.:
   
   ```
-  header: Content-Type = Content-Type
+  header: Content-Type = application/json
   body : {
     "port": 443,
     "protocol": "https:",
