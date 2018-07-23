@@ -6,7 +6,10 @@
     ],
     "exclude": [
         "**/**/*.spec.js",
-        "**/coverage/"
+        "**/coverage/",
+        "**/lib/request/request.js",
+        "**/lib/webhook/webhook.js",
+        "**/index.js"
     ],
     "reporter": [
         "lcov",
