@@ -49,13 +49,10 @@ The node-webhook is usefull if you need to track and log HTTP requests.
 
 ## Running the tests
 
-### StandardJS coding style tests
-
-It uses StandardJS as javascript style guide
-
 ```
-npm run std
+npm run test
 ```
+It uses StandardJS, mocha, chai, sinon and nyc.
 
 ## Author
 
