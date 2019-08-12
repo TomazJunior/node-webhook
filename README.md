@@ -34,7 +34,7 @@ The node-webhook is usefull if you need to track and log HTTP requests.
   - e.g.:
   
   ```
-  header: Content-Type = Content-Type
+  header: Content-Type = application/json
   body : {
     "port": 443,
     "protocol": "https:",
@@ -49,13 +49,10 @@ The node-webhook is usefull if you need to track and log HTTP requests.
 
 ## Running the tests
 
-### StandardJS coding style tests
-
-It uses StandardJS as javascript style guide
-
 ```
-npm run std
+npm run test
 ```
+It uses StandardJS, mocha, chai, sinon and nyc.
 
 ## Author
 
@@ -65,8 +62,7 @@ See also the list of [contributors](https://github.com/TomazJunior/node-webhook/
 
 ## Next steps
 
-- [ ] Implement unit tests
-- [ ] Implement integration tests
+- [x] Implement unit tests
 - [x] Dockerize it
 - [ ] Turn it into a node module
 
